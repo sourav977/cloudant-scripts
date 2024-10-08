@@ -28,9 +28,28 @@ example upload bulk docs to cloudant db
 ```
 export COUCH_URL=https://myusername:mypassword@myhost.cloudant.com
 export COUCH_DATABASE=dbname
-export COUCH_PARALLELISM=10
+export COUCH_PARALLELISM=7
 export COUCH_BUFFER_SIZE=1500
 export COUCH_RESUME=true
 
 cat sample_json_2MB.txt  | couchrestore
+
+
+output
+-------
+% cat sample_json_1MB.txt | couchrestore                                                                              [9/10/24 | 12:21:22]
+================================================================================
+Performing restore on https://****:****@myhost.cloudant.com/one_mb using configuration:
+{
+  "bufferSize": 1500,
+  "parallelism": 7,
+  "requestTimeout": 120000
+}
+================================================================================
+  couchbackup:restore:batch restored 1500 +0ms
+  couchbackup:restore:batch restored 2109 +34ms
+  couchbackup:restore:batch restored 3609 +573ms
+  couchbackup:restore:batch restored 5109 +58ms
+  couchbackup:restore:batch restored 6609 +103ms
+  couchbackup:restore finished { total: 6609 } +0ms
 ```
