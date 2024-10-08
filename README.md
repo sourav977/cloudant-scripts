@@ -32,7 +32,7 @@ export COUCH_PARALLELISM=7
 export COUCH_BUFFER_SIZE=1500
 export COUCH_RESUME=true
 
-cat sample_json_2MB.txt  | couchrestore
+cat sample_json_1MB.txt  | couchrestore
 
 
 output
