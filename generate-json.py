@@ -32,6 +32,6 @@ def generate_large_json_file(file_path, file_size_gb):
     print(f"Generated JSON file: {file_path}")
 
 if __name__ == "__main__":
-    output_file_path = 'sample_json_2MB.json'
+    output_file_path = 'sample_json_2MB.txt'
     target_file_size_gb = 0.002
     generate_large_json_file(output_file_path, target_file_size_gb)
