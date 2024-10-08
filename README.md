@@ -24,7 +24,7 @@ adjust `target_file_size_gb` to generate a large `.txt` file containing json doc
 
 `target_file_size_gb = 1` means a 1GB txt file.
 
-example upload bulk docs to cloudant db
+example upload bulk docs to cloudant db using `couchrestore` CLI
 ```
 export COUCH_URL=https://myusername:mypassword@myhost.cloudant.com
 export COUCH_DATABASE=dbname
