@@ -16,7 +16,7 @@ curl -u username -H "Content-Type: application/json" -d@generated_documents.json
 
 ----
 
-`generate-json.py` can be helpful with [couchrestore](https://www.npmjs.com/package/@cloudant/couchbackup) which includes sample json documents and generates a `.txt` file of the required size for upload to the Cloudant database.
+Script `generate-json.py` can be helpful with [couchrestore](https://www.npmjs.com/package/@cloudant/couchbackup) CLI , it generates sample json documents and includes them in  a `.txt` file of the required size for uploading  to the Cloudant database.
 
 adjust `target_file_size_gb` to generate a large `.txt` file containing json docs suitable for a Cloudant database.
 
