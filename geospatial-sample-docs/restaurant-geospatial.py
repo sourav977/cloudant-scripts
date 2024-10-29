@@ -41,7 +41,7 @@ def generate_document(doc_id, restaurant_names):
     categories = generate_categories()
 
     random_data = {
-        "_id": doc_id,
+        "_id": str(doc_id),
         "name": name,
         "contact": {
             "phone": phone,
@@ -60,13 +60,13 @@ def generate_document(doc_id, restaurant_names):
 
 def generate_documents(file_path, doc_count, restaurant_names):
     with open(file_path, 'w') as file:
-        file.write('[') 
+        file.write('{"docs": [') 
         for i in range(doc_count):
             json_document = generate_document(i + 1, restaurant_names)
             json.dump(json_document, file)
             if i < doc_count - 1:
                 file.write(',')
-        file.write(']') 
+        file.write(']}') 
 
     print(f"Generated JSON file: {file_path}")
 
