@@ -8,6 +8,8 @@ You can easily adjust the `number_of_documents` variable to create json document
 
 `number_of_documents = 10000` creates 10,000 json documents.
 
+Script `restaurant-geospatial.py` generates geospatial documents.
+
 example upload bulk docs to cloudant db
 
 ```
